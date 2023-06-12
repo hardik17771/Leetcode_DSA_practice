@@ -2,16 +2,14 @@
 #include<vector>
 using namespace std;
 
-void rotate_array(vector<int> arr, int k)
-{
-    vector<int> temp(arr.size());
-   for(int i=0;i<arr.size();i++)
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+         vector<int> temp(nums.size());
+   for(int i=0;i<nums.size();i++)
    {
-    temp[(i+k)%arr.size()]=arr[i];
+    temp[(i+k)%nums.size()]=nums[i];
    }
-   arr = temp;
-}
-int main()
-{
-   
-}
+   nums = temp;
+    }
+};
